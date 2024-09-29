@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Contact form for inquiries and support."
+    />
+    <title>Contact Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" type="module" defer></script>
+  </head>
+  <body>
+    <main class="container">
+      <form id="contact-form" action="/" method="post" class="form" novalidate>
+        <h2 class="form-title">Contact Us</h2>
+        <fieldset class="name-group">
+          <legend class="name-legend">Name</legend>
+          <div class="first-name-group">
+            <label class="first-name-label" for="first-name"
+              >First Name <span class="mandatory">*</span></label
+            >
+            <input
+              class="first-name-input"
+              type="text"
+              name="first-name"
+              id="first-name"
+              placeholder="Enter your first name"
+              autocomplete="given-name"
+              aria-required="true"
+              required
+            />
+            <div
+              class="error-message first-name-error"
+              id="first-name-error"
+              role="alert"
+            ></div>
+          </div>
+          <div class="last-name-group">
+            <label class="last-name-label" for="last-name"
+              >Last Name <span class="mandatory">*</span></label
+            >
+            <input
+              class="last-name-input"
+              type="text"
+              name="last-name"
+              id="last-name"
+              placeholder="Enter your last name"
+              autocomplete="family-name"
+              aria-required="true"
+              required
+            />
+            <div
+              class="error-message last-name-error"
+              id="last-name-error"
+              role="alert"
+            ></div>
+          </div>
+        </fieldset>
+        <fieldset class="email-group">
+          <legend class="email-legend">Email</legend>
+          <label class="email-label" for="email"
+            >Email Address <span class="mandatory">*</span></label
+          >
+          <input
+            class="email-input"
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter your email"
+            autocomplete="email"
+            aria-required="true"
+            required
+          />
+          <div
+            class="error-message email-error"
+            id="email-error"
+            role="alert"
+          ></div>
+        </fieldset>
+        <fieldset class="query-type-group">
+          <legend class="query-type-legend">
+            Query Type <span class="mandatory">*</span>
+          </legend>
+          <div class="general-enquiry-group">
+            <input
+              type="radio"
+              name="query"
+              id="general-enquiry"
+              class="general-enquiry-input"
+              value="general-enquiry"
+              aria-required="true"
+              required
+            />
+            <label for="general-enquiry" class="general-enquiry-label"
+              >General Enquiry</label
+            >
+          </div>
+          <div class="support-enquiry-group">
+            <input
+              type="radio"
+              name="query"
+              id="support-enquiry"
+              class="support-enquiry-input"
+              value="support-enquiry"
+              aria-required="true"
+              required
+            />
+            <label for="support-enquiry" class="support-enquiry-label"
+              >Support Enquiry</label
+            >
+          </div>
+          <div
+            class="error-message query-type-error"
+            id="query-type-error"
+            role="alert"
+          ></div>
+        </fieldset>
+        <fieldset class="message-group">
+          <legend class="message-legend">
+            <label for="message" class="message-label"
+              >Message <span class="mandatory">*</span></label
+            >
+          </legend>
+          <textarea
+            class="message-input"
+            name="message"
+            id="message"
+            placeholder="Enter your message"
+            aria-required="true"
+            required
+          ></textarea>
+          <div
+            class="error-message message-error"
+            id="message-error"
+            role="alert"
+          ></div>
+        </fieldset>
+        <fieldset class="consent-group">
+          <legend class="consent-legend">Consent</legend>
+          <input
+            type="checkbox"
+            name="consent"
+            id="consent"
+            class="consent-input"
+            aria-required="true"
+            required
+          />
+          <label for="consent" class="consent-label"
+            >I consent to being contacted by the team
+            <span class="mandatory">*</span></label
+          >
+        </fieldset>
+        <div
+          class="error-message consent-error"
+          id="consent-error"
+          role="alert"
+        ></div>
+        <div class="error-message" id="form-errors" role="alert"></div>
+        <button type="submit" class="btn-submit">Submit</button>
+      </form>
+    </main>
+  </body>
+</html>
